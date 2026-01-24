@@ -67,16 +67,6 @@ static const char *lockcmd[] = { "slock", NULL };
 static const char *print_selection_file_cmd[] = { "print-selection-file", NULL };
 static const char *print_selection_clip_cmd[] = { "print-selection-clip", NULL };
 
-/* volume */
-static const char *volup[]   = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%+", NULL };
-static const char *voldown[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%-", NULL };
-static const char *volmute[] = { "wpctl", "set-mute",   "@DEFAULT_AUDIO_SINK@", "toggle", NULL };
-
-/* media */
-static const char *playpause[] = { "playerctl", "play-pause", NULL };
-static const char *next[]      = { "playerctl", "next", NULL };
-static const char *prev[]      = { "playerctl", "previous", NULL };
-
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
